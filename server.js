@@ -218,7 +218,7 @@ function yeh(){
 io.sockets.on('connection', function(user){
 
   console.log('Client '+ user.id + 'has joined')
-  user.emit('/chat', {text: 'Welcome to this gay ass chat', usr:'server'})
+  user.emit('/chat', {text: 'Welcome to this chat', usr:'server'})
 
   user.on('/chat', function (msg){
       io.sockets.emit('/chat', msg)
